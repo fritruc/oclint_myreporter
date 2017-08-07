@@ -111,18 +111,18 @@ public:
 
     void writeSummaryTable(std::ostream &out, Results &results)
     {
-        out << "<table><thead><tr><th>Total Files</th><th>Files with Violations</th>"
-            << "<th>Priority 1</th><th>Priority 2</th><th>Priority 3</th>"
-            << "<th>Compiler Errors</th><th>Compiler Warnings</th>"
-            << "<th>Clang Static Analyzer</th></tr></thead>";
-        out << "<tbody><tr><td>" << results.numberOfFiles() << "</td><td>"
-            << results.numberOfFilesWithViolations() << "</td><td class='priority1'>"
-            << results.numberOfViolationsWithPriority(1) << "</td><td class='priority2'>"
-            << results.numberOfViolationsWithPriority(2) << "</td><td class='priority3'>"
-            << results.numberOfViolationsWithPriority(3) << "</td><td class='cmplr-error'>"
-            << results.allErrors().size() << "</td><td class='cmplr-warning'>"
-            << results.allWarnings().size() << "</td><td class='checker-bug'>"
-            << results.allCheckerBugs().size() << "</td></tr></tbody></table>";
+        // out << "<table><thead><tr><th>Total Files</th><th>Files with Violations</th>"
+        //     << "<th>Priority 1</th><th>Priority 2</th><th>Priority 3</th>"
+        //     << "<th>Compiler Errors</th><th>Compiler Warnings</th>"
+        //     << "<th>Clang Static Analyzer</th></tr></thead>";
+        // out << "<tbody><tr><td>" << results.numberOfFiles() << "</td><td>"
+        //     << results.numberOfFilesWithViolations() << "</td><td class='priority1'>"
+        //     << results.numberOfViolationsWithPriority(1) << "</td><td class='priority2'>"
+        //     << results.numberOfViolationsWithPriority(2) << "</td><td class='priority3'>"
+        //     << results.numberOfViolationsWithPriority(3) << "</td><td class='cmplr-error'>"
+        //     << results.allErrors().size() << "</td><td class='cmplr-warning'>"
+        //     << results.allWarnings().size() << "</td><td class='checker-bug'>"
+        //     << results.allCheckerBugs().size() << "</td></tr></tbody></table>";
 
         auto  fct = [](std::ostream &out, Results&  results,  int  priority ) {
             std::map< std::string, int >  array;  
